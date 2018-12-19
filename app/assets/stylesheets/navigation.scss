@@ -1,0 +1,18 @@
+.navigation {
+    
+    .application-title {
+        display: inline;
+        font-size: 2.75em;
+    }
+    .nav-items {
+        margin-left: 40%;
+        display: inline;
+        .nav-item {
+            margin-left: 10px;
+            margin-right: 10px;
+            display: inline;
+            list-style: none;
+            font-size: 1.5em;
+        }
+    }
+}
