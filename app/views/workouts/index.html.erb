@@ -1,6 +1,9 @@
 <h3>Workouts</h3>
 
 <% if @workouts %>
+    <% @workouts.each do |workout| %>
+        <p>Workout</p>
+    <% end %>
 <% else %>
     <h4>No workouts found</h4>
 <% end %>
