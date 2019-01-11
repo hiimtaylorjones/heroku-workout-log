@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2018_11_30_210803) do
   enable_extension "plpgsql"
 
   create_table "movements", force: :cascade do |t|
+    t.bigint "workout_id"
     t.string "name"
     t.string "description"
     t.string "amount"
@@ -23,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_11_30_210803) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["workout_id"], name: "index_movements_on_workout_id"
   end
 
   create_table "workouts", force: :cascade do |t|

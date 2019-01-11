@@ -8,4 +8,10 @@ RSpec.describe Workout, :type => :model do
         expect(workout.valid?).to eq(true)
     end
 
+    it "can have associated movements" do 
+        workout = FactoryBot.create(:workout)
+        movement = FactoryBot.create(:movement, workout: workout)
+        expect(workout.movements.length).to eq(1)
+    end
+
 end
