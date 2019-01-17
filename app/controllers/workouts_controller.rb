@@ -22,4 +22,10 @@ class WorkoutsController < ApplicationController
         @workout.destroy
     end
 
+private 
+
+    def workout_params
+        params.require(:workout).permit(:name, :condition, :time, :max_weight, :reps, :description, :notes)
+    end
+
 end
