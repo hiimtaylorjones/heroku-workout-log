@@ -1,0 +1,35 @@
+<div class="workout-form">
+    <%= form_for @workout, url: { action: "create" } do |f| %>
+        <div class="text-input">
+            <%= f.label :name %>
+            <br />
+            <%= f.text_field :name %>
+        </div>
+
+        <div class="text-input">
+            <%= f.label :condition %>
+            <br />
+            <%= f.text_field :condition %>
+        </div>
+
+        <div class="text-input">
+            <%= f.label :time %>
+            <br />
+            <%= f.text_field :time %>
+        </div>
+
+        <div class="text-input">
+            <%= f.label :max_weight %>
+            <br />
+            <%= f.text_field :max_weight %>
+        </div>
+
+        <div class="text-input">
+            <%= f.label :reps %>
+            <br />
+            <%= f.text_field :reps %>
+        </div>
+
+        <%= f.submit("Create Workout") %>
+    <% end %>
+</div>

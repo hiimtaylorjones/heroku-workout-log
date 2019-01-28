@@ -1,3 +1,30 @@
 // Place all the styles related to the workouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.workout-form {
+    margin-top: 5%;
+    width: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+    .text-input {
+        label {
+            border-radius: 6px;
+            font-size: 1.25em;
+            width: 40%;
+        }
+        input[type='text'] {
+            padding: 5px;
+            border-radius: 6px;
+            font-size: 1.25em;
+            width: 40%;
+        }   
+    }
+    input[type='submit'] {
+        margin-top: 20px;
+        width: 200px;
+        font-size: 1.25em;
+        height: 100px;
+    }
+}
