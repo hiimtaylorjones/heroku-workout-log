@@ -8,6 +8,15 @@ class WorkoutsController < ApplicationController
         @workout = Workout.new
     end
 
+    def create
+        @workout = Workout.new(workout_params)
+        if @workout.save
+            redirect_to workouts_path, notice: "Workout created!"
+        else
+            render :new, notice: "There was an error processing your request"
+        end
+    end
+
     def show
         @workout = Workout.find(params[:id])
     end

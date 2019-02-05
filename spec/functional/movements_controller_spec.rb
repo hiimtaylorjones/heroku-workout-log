@@ -5,7 +5,9 @@ RSpec.describe MovementsController, :type => :controller do
     describe "GET index" do
         
         it "assigns @movements" do
-          movement = FactoryBot.create(:movement)
+          workout = FactoryBot.create(:workout)
+          movement = FactoryBot.create(:movement, workout: workout)
+          puts movement
           get :index
           expect(assigns(:movements)).to eq([movement])
         end

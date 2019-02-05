@@ -1,4 +1,6 @@
+
 <div class="workout-form">
+    <%= link_to "Back to Workouts", root_path %>
     <%= form_for @workout, url: { action: "create" } do |f| %>
         <div class="text-input">
             <%= f.label :name %>

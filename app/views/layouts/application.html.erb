@@ -11,12 +11,18 @@
 
   <body>
     <div class="navigation">
-      <div class="application-title">Workout Log</div>
+      <div class="application-title"><%= link_to "Workout Log", root_path %></div>
       <ul class="nav-items">
         <li class="nav-item">Workouts</li>
         <li class="nav-item">Nutrition</li>
         <li class="nav-item">Settings</li>
       </ul>
+    </div>
+
+    <div class="message-box">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
     </div>
 
     <%= yield %>

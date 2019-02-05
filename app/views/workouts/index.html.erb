@@ -1,9 +1,13 @@
 <h3>Workouts</h3>
 
-<% if @workouts %>
-    <% @workouts.each do |workout| %>
-        <p>Workout</p>
+<div class-"workout-list">
+    <% if @workouts %>
+        <% @workouts.each do |workout| %>
+            <%= link_to workout.name, "#" %>
+        <% end %>
+    <% else %>
+        <h4>No workouts found</h4>
     <% end %>
-<% else %>
-    <h4>No workouts found</h4>
-<% end %>
+</div>
+
+<%= link_to "Create New Workout", new_workout_path %>
