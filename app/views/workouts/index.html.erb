@@ -2,9 +2,11 @@
 
 <div class-"workout-list">
     <% if @workouts %>
-        <% @workouts.each do |workout| %>
-            <%= link_to workout.name, "#" %>
-        <% end %>
+        <ul>
+            <% @workouts.each do |workout| %>
+                <li><%= link_to "#{workout.created_at} #{workout.name}", workout_path(workout) %></li>
+            <% end %>
+        </ul>
     <% else %>
         <h4>No workouts found</h4>
     <% end %>
