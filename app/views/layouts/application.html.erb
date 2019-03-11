@@ -11,10 +11,10 @@
 
   <body>
     <div class="navigation">
-      <div class="application-title"><%= link_to "Workout Log", root_path %></div>
+      <div class="application-title"><%= link_to "Iron & Soil", root_path %></div>
       <ul class="nav-items">
-        <li class="nav-item">Workouts</li>
-        <li class="nav-item">Nutrition</li>
+        <li class="nav-item">IRON</li>
+        <li class="nav-item">SOIL</li>
         <li class="nav-item">Settings</li>
       </ul>
     </div>
@@ -25,6 +25,8 @@
       <% end %>
     </div>
 
-    <%= yield %>
+    <div class="main-content">
+      <%= yield %>
+    </div>
   </body>
 </html>
