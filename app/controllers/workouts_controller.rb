@@ -28,7 +28,11 @@ class WorkoutsController < ApplicationController
 
     def destroy
         @workout = Workout.find(params[:id])
-        @workout.destroy
+        if @workout.destroy
+            redirect_to workouts_path, notice: "Workout removed!"
+        else
+            redirect_to workout_path(@workout), notice: "We could not remove your workout"
+        end
     end
 
 private 

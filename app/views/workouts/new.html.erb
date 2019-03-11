@@ -1,6 +1,16 @@
+<%= link_to "Back to Workouts", root_path %>
 
 <div class="workout-form">
-    <%= link_to "Back to Workouts", root_path %>
+
+    <% if @workout.errors.present? %>
+        <p>We couldn't save this workout for the following reasons:</p>
+        <ul>
+            <% @workout.errors.full_messages.each do |error| %>
+                <li><%= error %></li>
+            <% end %>
+        </ul>
+    <% end %>
+    
     <%= form_for @workout, url: { action: "create" } do |f| %>
         <div class="text-input">
             <%= f.label :name %>
@@ -30,6 +40,12 @@
             <%= f.label :reps %>
             <br />
             <%= f.text_field :reps %>
+        </div>
+
+        <div class="text-area-input">
+            <%= f.label :notes %>
+            <br />
+            <%= f.text_area :notes %>
         </div>
 
         <%= f.submit("Create Workout") %>

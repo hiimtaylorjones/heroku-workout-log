@@ -15,3 +15,5 @@
         <b><%= @workout.reps %></b>
     </div>
 </div>
+
+<%= link_to "Delete Workout", workout_path(@workout), data: {:confirm => 'Are you sure?'}, :method => :delete %>
