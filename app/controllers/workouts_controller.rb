@@ -6,6 +6,11 @@ class WorkoutsController < ApplicationController
 
     def new
         @workout = Workout.new
+        @conditions = [
+            ["For Time", "For Time"], 
+            ["Max Weight", "Max Weight"], 
+            ["Max Reps", "Max Reps"]
+        ]
     end
 
     def create

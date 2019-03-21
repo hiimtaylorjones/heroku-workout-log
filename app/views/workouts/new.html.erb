@@ -21,26 +21,28 @@
         <div class="text-input">
             <%= f.label :condition %>
             <br />
-            <%= f.text_field :condition %>
+            <%= select_tag(:condition, options_for_select(@conditions)) %>
         </div>
 
-        <div class="text-input">
-            <%= f.label :time %>
-            <br />
-            <%= f.text_field :time %>
-        </div>
-
-        <div class="text-input">
-            <%= f.label :max_weight %>
-            <br />
-            <%= f.text_field :max_weight %>
-        </div>
-
-        <div class="text-input">
-            <%= f.label :reps %>
-            <br />
-            <%= f.text_field :reps %>
-        </div>
+        <% if @workout.condition == "For Time" %>
+            <div class="text-input">
+                <%= f.label :time %>
+                <br />
+                <%= f.text_field :time %>
+            </div>
+        <% elsif @workout.condition = "Max Weight" %>
+            <div class="text-input">
+                <%= f.label :max_weight %>
+                <br />
+                <%= f.text_field :max_weight %>
+            </div>
+        <% elsif @workout.condition = "Max Reps" %>
+            <div class="text-input">
+                <%= f.label :reps %>
+                <br />
+                <%= f.text_field :reps %>
+            </div>
+        <% end %>
 
         <div class="text-input">
             <%= f.label :notes %>
