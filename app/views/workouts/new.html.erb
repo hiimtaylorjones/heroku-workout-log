@@ -1,5 +1,7 @@
 <%= link_to "Back to Workouts", root_path %>
 
+<%= javascript_pack_tag ‘hello_react’ %>
+
 <div class="workout-form">
 
     <% if @workout.errors.present? %>
