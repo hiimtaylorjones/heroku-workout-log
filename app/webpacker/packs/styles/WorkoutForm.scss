@@ -8,20 +8,23 @@
     margin-left: 25%;
     margin-right: 25%;
 
-    .text-input {
+    .input-group {
+        margin-bottom: 10px;
+
         label {
             border-radius: 6px;
             font-size: 1.25em;
             width: 40%;
+            display: flex;
         }
         input[type='text'] {
             padding: 5px;
             border-radius: 6px;
             font-size: 1.25em;
-            width: 40%;
+            width: 41%;
         }
         textarea {
-            width: 40%;
+            width: 42%;
             height: 6em;
             border-radius: 6px;
         }
