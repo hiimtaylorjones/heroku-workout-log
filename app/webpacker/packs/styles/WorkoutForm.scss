@@ -29,6 +29,15 @@
             border-radius: 6px;
         }
     }
+
+    .select-group {
+        select {
+            width: 40%;
+            font-size: 1.15em;
+        }
+        margin-bottom: 10px;
+    }
+
     input[type='submit'] {
         margin-top: 20px;
         width: 200px;
