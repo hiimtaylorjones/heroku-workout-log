@@ -1,7 +1,7 @@
 import JSONAPIAdapter from '@ember-data/adapter/json-api';
 import ENV from '../config/environment';
 
-options = {
+let options = {
 
 }
 
