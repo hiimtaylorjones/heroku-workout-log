@@ -17,6 +17,8 @@ gem 'webpacker'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'rack-cors'
+gem 'foreman'
 
 group :production do 
   gem 'rails_12factor', group: :production
