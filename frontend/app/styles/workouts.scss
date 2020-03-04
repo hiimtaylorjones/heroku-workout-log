@@ -1,0 +1,47 @@
+.workout-form {
+  margin-top: 5%;
+  width: 100%;
+  margin-left: 25%;
+  margin-right: 25%;
+
+  .input-group {
+      margin-bottom: 10px;
+
+      label {
+          border-radius: 6px;
+          font-size: 1.25em;
+          width: 40%;
+          display: flex;
+      }
+      input[type='text'] {
+          padding: 5px;
+          border-radius: 6px;
+          font-size: 1.25em;
+          width: 41%;
+      }
+      textarea {
+          width: 42%;
+          height: 6em;
+          border-radius: 6px;
+      }
+  }
+
+  .select-group {
+      select {
+          width: 40%;
+          font-size: 1.15em;
+      }
+      margin-bottom: 10px;
+  }
+
+  input[type='submit'] {
+      margin-top: 20px;
+      width: 200px;
+      font-size: 1.25em;
+      height: 100px;
+  }
+}
+
+.workout-list {
+  margin-bottom: 20px;
+}

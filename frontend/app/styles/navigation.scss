@@ -1,0 +1,44 @@
+.navigation {
+    
+  a {
+      text-decoration: none;
+  }
+  
+  .application-title {
+      display: inline;
+      font-size: 2.75em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-left: 10px;
+      a { 
+          color: white;
+      }
+  }
+  .nav-items {
+      margin-left: 40%;
+      display: inline;
+      .nav-item {
+          margin-left: 10px;
+          margin-right: 10px;
+          display: inline;
+          list-style: none;
+          font-size: 1.5em;
+          color: white;
+          letter-spacing: 2px;
+          border: 1px solid black;
+      }
+  }
+
+  background-color: black;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.message-box {
+  width: 60%;
+  height: 5%;
+
+  .alert {
+      font-size: 1.4em;
+  }
+}
