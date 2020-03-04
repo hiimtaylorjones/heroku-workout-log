@@ -1,3 +1,3 @@
 class Movement < ApplicationRecord
-    belongs_to :workout
+    has_many :units
 end

@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   root 'workouts#index'
   resources :workouts
   resources :movements
+
+  # get '*frontend_path', to: 'ember#index'
+  get '/ember', to: 'ember#index'
 end

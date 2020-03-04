@@ -1,11 +1,6 @@
 class Workout < ApplicationRecord
-    has_many :movements
+    has_many :units
 
-    validates :name, presence: true
-    validate :proper_condition
+    validates :classification, :condition, presence: true
 
-    def proper_condition
-        sanitized = condition.downcase
-        return ["for time", "max weight"].include?(sanitized)
-    end
 end
