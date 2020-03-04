@@ -1,5 +1,12 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="navigation">
+  <div class="application-title">{{#link-to 'home' }}IRON & SOIL{{/link-to}}</div>
+  <ul class="nav-items">
+    <li class="nav-item">IRON</li>
+    <li class="nav-item">SOIL</li>
+    <li class="nav-item">Settings</li>
+  </ul>
+</div>
 
-{{outlet}}
+<div class="main-content">
+  {{outlet}}
+</div>
