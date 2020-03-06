@@ -1,12 +1,13 @@
 .navigation {
-    
+    width: 100%;
+
   a {
       text-decoration: none;
   }
   
   .application-title {
       display: inline;
-      font-size: 2.75em;
+      font-size: 1.5em;
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-left: 10px;
@@ -15,7 +16,6 @@
       }
   }
   .nav-items {
-      margin-left: 40%;
       display: inline;
       .nav-item {
           margin-left: 10px;

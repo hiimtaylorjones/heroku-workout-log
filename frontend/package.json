@@ -55,5 +55,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "bulma": "^0.8.0"
   }
 }

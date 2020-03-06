@@ -1,32 +1,16 @@
 <h1>New Workout</h1>
 
-{{!-- <div className="workout-form">
-  <h3>New Workout</h3>
-  <div className="input-group">
-    <label>Name</label>
-    <input name="name" value={this.state.name} type="text"></input>
+<div class="workout-form">
+  <div class="field">
+    <label class="label">Type</label>
+    <div class="control">
+      <Input id="classification" @value={{workout.classification}} />
+    </div>
   </div>
-  <div className="select-group">
-    <select value={this.state.workoutCondition} >
-      <option value="time">For Time</option>
-      <option value="reps">Max Reps</option>
-      <option value="weight">Max Weight</option>
-    </select>
+  <div class="field">
+    <label class="label">Notes</label>
+    <div class="control">
+      <Input id="notes" @value={{workout.notes}} />
+    </div>
   </div>
-  <div className="input-group">
-    <label>Time</label>
-    <input name="time" value={this.state.time} type="text"></input>
-  </div>
-  <div className="input-group">
-    <label>Total Reps</label>
-    <input name="time" value={this.state.reps} type="text" ></input>
-  </div>
-  <div className="input-group">
-    <label>Max Weight</label>
-    <input name="time" value={this.state.weight} type="text" ></input>
-  </div>
-  <div className="input-group">
-    <label>Notes</label>
-    <textarea name="notes" value={this.state.notes} type="text" ></textarea>
-  </div>
-</div> --}}
+</div>
