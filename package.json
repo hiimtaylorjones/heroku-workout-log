@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "heroku-postbuild": "bin/build_ember"
+  }
+}
