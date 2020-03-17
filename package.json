@@ -1,4 +1,5 @@
 {
+  "name": "workout-log",
   "scripts": {
     "heroku-postbuild": "bin/build_ember"
   }
