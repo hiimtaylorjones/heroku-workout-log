@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
 cd frontend
-
 npm install
-npm install -g ember-cli
 ember build

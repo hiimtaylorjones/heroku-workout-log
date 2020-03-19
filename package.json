@@ -1,6 +1,6 @@
 {
   "name": "taylor-workout-log",
   "scripts": {
-    "heroku-postbuild": "bin/build_ember_production"
+    "build": "bin/build_ember_production"
   }
 }
