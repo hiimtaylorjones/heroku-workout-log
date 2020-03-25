@@ -2,4 +2,4 @@
 
 cd frontend
 npm install
-ember build
+ember build --prod
