@@ -1,2 +1,0 @@
-api: bundle exec rails server -p 3000
-frontend: cd frontend && ember serve -p 4200

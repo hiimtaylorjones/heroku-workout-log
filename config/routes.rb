@@ -6,7 +6,4 @@ Rails.application.routes.draw do
       resources :workouts
     end
   end
-
-  # get '*frontend_path', to: 'ember#index'
-  get '/ember', to: 'ember#index'
 end
