@@ -1,6 +1,0 @@
-{
-  "name": "taylor-workout-log",
-  "scripts": {
-    "build": "cd frontend && npm build"
-  }
-}
