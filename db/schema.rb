@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_03_04_211649) do
   end
 
   create_table "workouts", force: :cascade do |t|
+    t.string "title"
     t.string "classification"
     t.string "condition"
     t.text "notes"
