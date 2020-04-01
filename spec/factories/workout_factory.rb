@@ -1,10 +1,8 @@
 FactoryBot.define do 
-
     factory :workout do 
-        name { Faker::Lorem.word }
+        title { Faker::Lorem.word }
+        classification { "Workout" }
         condition { "For Time" }
-        time { "#{rand(10)}:#{rand(60)}" }
-        rounds { rand(5) + 3 }
+        notes { Faker::Lorem.paragraph }
     end
-
 end
