@@ -42,6 +42,9 @@ end
 group :test do
   gem 'rspec-rails', '4.0.0.beta3'
   gem 'rails-controller-testing'
+end
+
+group :development, :test do 
   gem 'faker'
   gem "factory_bot_rails"
 end
