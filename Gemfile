@@ -16,6 +16,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rack-cors'
 gem 'foreman'
 
+gem 'bcrypt'
+gem 'doorkeeper'
+
 group :production do 
   gem 'rails_12factor', group: :production
 end
