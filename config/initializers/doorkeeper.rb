@@ -5,79 +5,17 @@ Doorkeeper.configure do
   # Check the list of supported ORMs here: https://github.com/doorkeeper-gem/doorkeeper#orms
   orm :active_record
 
-  # This block will be called to check whether the resource owner is authenticated or not.
-  resource_owner_authenticator do
+  resource_owner_from_credentials do
     User.find_by(email: params[:username])
         .try(:authenticate, params[:password])
   end
 
-  # If you didn't skip applications controller from Doorkeeper routes in your application routes.rb
-  # file then you need to declare this block in order to restrict access to the web interface for
-  # adding oauth authorized applications. In other case it will return 403 Forbidden response
-  # every time somebody will try to access the admin web interface.
-  #
-  # admin_authenticator do
-  #   # Put your admin authentication logic here.
-  #   # Example implementation:
-  #
-  #   if current_user
-  #     head :forbidden unless current_user.admin?
-  #   else
-  #     redirect_to sign_in_url
-  #   end
-  # end
-
-  # You can use your own model classes if you need to extend (or even override) default
-  # Doorkeeper models such as `Application`, `AccessToken` and `AccessGrant.
-  #
-  # Be default Doorkeeper ActiveRecord ORM uses it's own classes:
-  #
-  # access_token_class "Doorkeeper::AccessToken"
-  # access_grant_class "Doorkeeper::AccessGrant"
-  # application_class "Doorkeeper::Application"
-  #
-  # Don't forget to include Doorkeeper ORM mixins into your custom models:
-  #
-  #   *  ::Doorkeeper::Orm::ActiveRecord::Mixins::AccessToken - for access token
-  #   *  ::Doorkeeper::Orm::ActiveRecord::Mixins::AccessGrant - for access grant
-  #   *  ::Doorkeeper::Orm::ActiveRecord::Mixins::Application - for application (OAuth2 clients)
-  #
-  # For example:
-  #
-  # access_token_class "MyAccessToken"
-  #
-  # class MyAccessToken < ApplicationRecord
-  #   include ::Doorkeeper::Orm::ActiveRecord::Mixins::AccessToken
-  #
-  #   self.table_name = "hey_i_wanna_my_name"
-  #
-  #   def destroy_me!
-  #     destroy
-  #   end
-  # end
-
-  # Enables polymorphic Resource Owner association for Access Tokens and Access Grants.
-  # By default this option is disabled.
-  #
-  # Make sure you properly setup you database and have all the required columns (run
-  # `bundle exec rails generate doorkeeper:enable_polymorphic_resource_owner` and execute Rails
-  # migrations).
-  #
-  # If this option enabled, Doorkeeper will store not only Resource Owner primary key
-  # value, but also it's type (class name). See "Polymorphic Associations" section of
-  # Rails guides: https://guides.rubyonrails.org/association_basics.html#polymorphic-associations
-  #
-  # [NOTE] If you apply this option on already existing project don't forget to manually
-  # update `resource_owner_type` column in the database and fix migration template as it will
-  # set NOT NULL constraint for Access Grants table.
-  #
-  # use_polymorphic_resource_owner
 
   # If you are planning to use Doorkeeper in Rails 5 API-only application, then you might
   # want to use API mode that will skip all the views management and change the way how
   # Doorkeeper responds to a requests.
   #
-  # api_only
+  api_only
 
   # Enforce token request content type to application/x-www-form-urlencoded.
   # It is not enabled by default to not break prior versions of the gem.
@@ -92,27 +30,6 @@ Doorkeeper.configure do
   # If you want to disable expiration, set this to `nil`.
   #
   # access_token_expires_in 2.hours
-
-  # Assign custom TTL for access tokens. Will be used instead of access_token_expires_in
-  # option if defined. In case the block returns `nil` value Doorkeeper fallbacks to
-  # +access_token_expires_in+ configuration option value. If you really need to issue a
-  # non-expiring access token (which is not recommended) then you need to return
-  # Float::INFINITY from this block.
-  #
-  # `context` has the following properties available:
-  #
-  # `client` - the OAuth client application (see Doorkeeper::OAuth::Client)
-  # `grant_type` - the grant type of the request (see Doorkeeper::OAuth)
-  # `scopes` - the requested scopes (see Doorkeeper::OAuth::Scopes)
-  #
-  # custom_access_token_expires_in do |context|
-  #   context.client.application.additional_settings.implicit_oauth_expiration
-  # end
-
-  # Use a custom class for generating the access token.
-  # See https://doorkeeper.gitbook.io/guides/configuration/other-configurations#custom-access-token-generator
-  #
-  # access_token_generator '::Doorkeeper::JWT'
 
   # The controller +Doorkeeper::ApplicationController+ inherits from.
   # Defaults to +ActionController::Base+ unless +api_only+ is set, which changes the default to
