@@ -18,10 +18,14 @@ class Api::V1::WorkoutsController < ApplicationController
 private 
 
   def workout_attributes
-    data = JSON.parse(request.raw_post)
-    params["data"] = data["data"]
+    add_ember_data_to_params
     params.require(:data)
           .require(:attributes)
           .permit(:title, :classification, :condition, :notes)
+  end
+
+  def add_ember_data_to_params
+    data = JSON.parse(request.raw_post)
+    params["data"] = data["data"]
   end
 end
