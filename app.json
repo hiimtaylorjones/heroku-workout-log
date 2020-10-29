@@ -23,7 +23,7 @@
     "RAILS_SERVE_STATIC_FILES": {
       "required": true
     },
-    "NPM_CONFIG_PRODUCTION" {
+    "NPM_CONFIG_PRODUCTION": {
       "required": true
     },
     "SECRET_KEY_BASE": {
