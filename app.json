@@ -23,5 +23,12 @@
     }
   },
   "name": "heroku-workout-log",
-  "stack": "heroku-18"
+  "stack": "heroku-18",
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rspec spec"
+      }
+    }
+  }
 }
