@@ -5,7 +5,7 @@
   "buildpacks": [
     { "url": "heroku/ruby" }
   ],
-  "description": "",
+  "description": "Workout Log API",
   "env": {
     "RACK_ENV": {
       "required": true
@@ -23,7 +23,5 @@
     }
   },
   "name": "heroku-workout-log",
-  "scripts": {
-  },
   "stack": "heroku-18"
 }
